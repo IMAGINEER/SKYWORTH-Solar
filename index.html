@@ -68,12 +68,11 @@
             z-index: 1;
         }
 
-        /* Subtle grid pattern overlay */
         .page-wrapper::after {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: 
+            background-image:
                 linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
             background-size: 60px 60px;
@@ -97,220 +96,182 @@
             flex-shrink: 0;
         }
 
-        .logo {
-            height: 86px;
-            width: auto;
-        }
-
-        .header-nav {
-            display: flex;
-            gap: 28px;
-        }
-
-        .header-nav a {
-            font-size: 13px;
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            transition: color 0.2s;
-            letter-spacing: 0.5px;
-        }
-
-        .header-nav a:hover {
-            color: #ffffff;
-        }
-
-        /* Main body */
+        /* Main body - centered */
         .body {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 80px;
-            padding: 20px 0;
         }
 
-        /* Left - Branding */
-        .left-panel {
-            flex: 0 0 320px;
+        .error-page {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 60px 20px;
         }
 
-        .left-panel h1 {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
+        .error-container {
+            text-align: center;
+            max-width: 500px;
         }
 
-        .left-panel h1 .highlight {
-            background: linear-gradient(90deg, #00c6ff, #0072ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .left-panel .tagline {
-            font-size: 15px;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.6;
+        .error-visual {
             margin-bottom: 32px;
         }
 
-        /* Quick access buttons */
-        .quick-access {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+        .error-visual svg {
+            max-width: 300px;
+            height: auto;
         }
 
-        .quick-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 16px;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 10px;
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: 500;
-            transition: all 0.2s;
-            backdrop-filter: blur(4px);
+        .error-container .error-code {
+            font-size: 140px;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            text-shadow: 0 0 80px rgba(0, 198, 255, 0.4);
         }
 
-        .quick-btn:hover {
-            background: rgba(255,255,255,0.12);
-            border-color: rgba(255,255,255,0.25);
-            transform: translateY(-1px);
+        .error-container h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.95);
         }
 
-        .quick-btn .btn-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .error-container p {
             font-size: 15px;
-            flex-shrink: 0;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 32px;
         }
 
-        /* Right - Region selector */
-        .right-panel {
-            flex: 0 0 480px;
+        .error-links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 40px;
         }
 
-        .region-section {
-            margin-bottom: 28px;
+        .error-links .btn-primary {
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
         }
 
-        .region-section-title {
+        .error-links .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 198, 255, 0.35);
+        }
+
+        .error-links .btn-secondary {
+            padding: 14px 32px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .error-links .btn-secondary:hover {
+            background: rgba(255,255,255,0.12);
+            border-color: rgba(0, 198, 255, 0.3);
+        }
+
+        .error-contact {
+            color: rgba(255,255,255,0.5);
+            font-size: 13px;
+        }
+
+        .error-contact a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+        .error-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .performance-card {
+            background: linear-gradient(135deg, rgba(0, 114, 255, 0.15), rgba(0, 198, 255, 0.1));
+            border: 1px solid rgba(0, 198, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .performance-card .perf-label {
             font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: rgba(255,255,255,0.4);
-            margin-bottom: 12px;
-            padding-left: 2px;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 8px;
         }
 
-        .region-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
+        .performance-card .perf-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 32px;
         }
 
-        .region-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 18px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 10px;
-            text-decoration: none;
-            color: #ffffff;
-            transition: all 0.2s;
-            backdrop-filter: blur(4px);
+        .performance-card .perf-item {
+            margin-bottom: 24px;
         }
 
-        .region-item:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(0,198,255,0.3);
-            transform: translateX(2px);
+        .performance-card .perf-item:last-child {
+            margin-bottom: 0;
         }
 
-        .region-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .performance-card .perf-item .label {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 4px;
         }
 
-        .region-flag {
-            width: 28px;
-            height: 20px;
-            object-fit: contain;
-        }
-
-        .region-text .region-name {
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 1px;
-        }
-
-        .region-text .region-lang {
-            font-size: 11px;
-            color: rgba(255,255,255,0.45);
-        }
-
-        .region-arrow {
-            font-size: 14px;
-            color: rgba(255,255,255,0.3);
-            transition: all 0.2s;
-        }
-
-        .region-item:hover .region-arrow {
+        .performance-card .perf-item .value {
+            font-size: 28px;
+            font-weight: 700;
             color: #00c6ff;
-            transform: translateX(3px);
         }
 
-        /* Divider line */
-        .divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            margin: 4px 0;
+        .performance-card .perf-item .value small {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.6);
         }
 
-        /* Footer */
-        .footer {
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 16px;
+        /* Company Info */
+        .company-info {
+            text-align: center;
+            padding: 24px 0;
             border-top: 1px solid rgba(255,255,255,0.06);
+            margin-top: auto;
         }
 
-        .footer-copy {
+        .company-info h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .company-info p {
             font-size: 12px;
-            color: rgba(255,255,255,0.35);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-        }
-
-        .footer-links a {
-            font-size: 12px;
-            color: rgba(255,255,255,0.45);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: #ffffff;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
         }
 
         /* Glow accent */
@@ -326,26 +287,288 @@
             pointer-events: none;
         }
 
+        /* Footer */
+        .footer {
+            flex-shrink: 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-bottom .footer-nav {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .footer-bottom .footer-nav a {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-bottom .footer-nav a:hover {
+            color: #00c6ff;
+        }
+
+        .footer-bottom .footer-nav img {
+            height: 40px;
+            width: auto;
+        }
+
+        .footer-bottom .footer-nav .brand-link span {
+            color: #00c6ff;
+            margin-left: 4px;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #00c6ff;
+        }
+
+        .footer-col .related-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-col .related-link img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        /* Investor links */
+        .footer-col.investors ul li a {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Social icons */
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icons a {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .social-icons a:hover {
+            background: rgba(0,198,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .social-icons a svg {
+            width: 18px;
+            height: 18px;
+            fill: rgba(255,255,255,0.7);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: linear-gradient(135deg, rgba(0, 20, 40, 0.95), rgba(0, 40, 60, 0.9));
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            backdrop-filter: blur(20px);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .modal-header h3 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.2s;
+        }
+
+        .modal-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .modal-regions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .modal-section-title {
+            grid-column: 1 / -1;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.4);
+            margin-top: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .modal-section-title:first-child {
+            margin-top: 0;
+        }
+
+        .modal-region-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.2s;
+        }
+
+        .modal-region-item:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(0,198,255,0.3);
+        }
+
+        .modal-region-item img {
+            width: 24px;
+            height: 18px;
+            object-fit: contain;
+        }
+
+        .modal-region-item span {
+            font-size: 13px;
+        }
+
+        /* Copyright */
+        .footer-bottom {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom .copyright {
+            font-size: 12px;
+            color: rgba(255,255,255,0.35);
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-bottom .footer-nav {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .footer-bottom .footer-nav a {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-bottom .footer-nav a:hover {
+            color: #00c6ff;
+        }
+
+        .footer-bottom .footer-nav img {
+            height: 40px;
+            width: auto;
+        }
+
+        .footer-bottom .footer-nav .brand-link span {
+            color: #00c6ff;
+            margin-left: 4px;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .content {
                 padding: 24px 32px;
             }
 
-            .body {
-                flex-direction: column;
-                gap: 40px;
-                overflow-y: auto;
-            }
-
-            .left-panel, .right-panel {
-                flex: none;
-                width: 100%;
-                max-width: 500px;
-            }
-
-            .left-panel h1 {
-                font-size: 32px;
+            .footer {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
             }
 
             body {
@@ -364,12 +587,28 @@
                 padding: 20px;
             }
 
-            .region-list {
-                grid-template-columns: 1fr;
+            .brand-section h1 {
+                font-size: 32px;
             }
 
-            .quick-access {
+            .brand-selector {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .footer {
                 grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .modal-regions {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
             }
         }
     </style>
@@ -381,133 +620,41 @@
         <div class="content">
             <!-- Header -->
             <header class="header">
-                <img src="assets/images/logo.png" alt="SKYWORTH Solar" class="logo">
-                <nav class="header-nav">
-                    <a href="https://www.skyworth-pv.com/about-us">About Us</a>
-                    <a href="https://www.skyworth-pv.com/contact-us">Contact Us</a>
-                </nav>
+                <img src="assets/images/SkyworthLogo_Blue.png" alt="SKYWORTH Solar" class="logo">
             </header>
 
             <!-- Body -->
             <main class="body">
-                <!-- Left Panel -->
-                <div class="left-panel">
-                    <h1>Make Every Ray of<br><span class="highlight">Sunshine Count</span></h1>
-                    <p class="tagline">Choose your region to explore SKYWORTH photovoltaic solutions for residential and commercial applications.</p>
-
-                    <div class="quick-access">
-                        <a href="https://www.skyworth-pv.com/residential/residential-pv" class="quick-btn">
-                            <img src="assets/images/a1icon24.svg" alt="" class="btn-icon" style="width:32px;height:32px;border-radius:8px;object-fit:contain;">
-                            <span>Residential</span>
-                        </a>
-                        <a href="https://www.skyworth-pv.com/business/business-pv" class="quick-btn">
-                            <img src="assets/images/a1icon28.svg" alt="" class="btn-icon" style="width:32px;height:32px;border-radius:8px;object-fit:contain;">
-                            <span>Commercial & Industrial</span>
-                        </a>
-                        <a href="https://www.skyworth-pv.com/software-cloud" class="quick-btn">
-                            <img src="assets/images/app-icon.webp" alt="" class="btn-icon" style="width:32px;height:32px;border-radius:8px;object-fit:contain;">
-                            <span>SKYWORTH Apps</span>
-                        </a>
-                        <a href="https://skyworth-pv.com/partner" class="quick-btn">
-                            <img src="assets/images/icon07.svg" alt="" class="btn-icon" style="width:32px;height:32px;border-radius:8px;object-fit:contain;">
-                            <span>Partner Portal</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Panel -->
-                <div class="right-panel">
-                    <!-- SKYWORTH Global -->
-                    <div class="region-section">
-                        <div class="region-section-title">SKYWORTH — Global</div>
-                        <div class="region-list">
-                            <a href="https://www.skyworth-pv.com/" class="region-item">
-                                <div class="region-info">
-                                    <img src="assets/images/globe2.svg" alt="" class="region-flag">
-                                    <div class="region-text">
-                                        <div class="region-name">Global</div>
-                                        <div class="region-lang">English</div>
-                                    </div>
-                                </div>
-                                <span class="region-arrow">→</span>
-                            </a>
-                            <a href="https://my.skyworth-pv.com/" class="region-item">
-                                <div class="region-info">
-                                    <img src="assets/images/my.svg" alt="" class="region-flag">
-                                    <div class="region-text">
-                                        <div class="region-name">Malaysia</div>
-                                        <div class="region-lang">English</div>
-                                    </div>
-                                </div>
-                                <span class="region-arrow">→</span>
-                            </a>
-                            <a href="https://th.skyworth-pv.com/" class="region-item">
-                                <div class="region-info">
-                                    <img src="assets/images/th.svg" alt="" class="region-flag">
-                                    <div class="region-text">
-                                        <div class="region-name">Thailand</div>
-                                        <div class="region-lang">ภาษาไทย</div>
-                                    </div>
-                                </div>
-                                <span class="region-arrow">→</span>
-                            </a>
-                            <a href="https://br.skyworth-pv.com/" class="region-item">
-                                <div class="region-info">
-                                    <img src="assets/images/globe1.svg" alt="" class="region-flag">
-                                    <div class="region-text">
-                                        <div class="region-name">Brasil</div>
-                                        <div class="region-lang">Português</div>
-                                    </div>
-                                </div>
-                                <span class="region-arrow">→</span>
-                            </a>
-                            <a href="https://vn.skyworth-pv.com/" class="region-item">
-                                <div class="region-info">
-                                    <img src="assets/images/vn.png" alt="" class="region-flag">
-                                    <div class="region-text">
-                                        <div class="region-name">Việt Nam</div>
-                                        <div class="region-lang">Tiếng Việt</div>
-                                    </div>
-                                </div>
-                                <span class="region-arrow">→</span>
-                            </a>
+                <div class="error-page">
+                    <div class="error-container">
+                        <div class="error-visual">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Solar panel illustration -->
+                                <rect x="50" y="100" width="300" height="150" rx="8" fill="none" stroke="rgba(0,198,255,0.3)" stroke-width="2"/>
+                                <line x1="50" y1="150" x2="350" y2="150" stroke="rgba(0,198,255,0.2)" stroke-width="1"/>
+                                <line x1="50" y1="200" x2="350" y2="200" stroke="rgba(0,198,255,0.2)" stroke-width="1"/>
+                                <line x1="150" y1="100" x2="150" y2="250" stroke="rgba(0,198,255,0.2)" stroke-width="1"/>
+                                <line x1="250" y1="100" x2="250" y2="250" stroke="rgba(0,198,255,0.2)" stroke-width="1"/>
+                                <!-- Sun rays -->
+                                <circle cx="320" cy="60" r="40" fill="none" stroke="#00c6ff" stroke-width="2" opacity="0.5"/>
+                                <line x1="320" y1="10" x2="320" y2="0" stroke="#00c6ff" stroke-width="2" opacity="0.3"/>
+                                <line x1="360" y1="30" x2="370" y2="20" stroke="#00c6ff" stroke-width="2" opacity="0.3"/>
+                                <line x1="370" y1="60" x2="380" y2="60" stroke="#00c6ff" stroke-width="2" opacity="0.3"/>
+                                <line x1="360" y1="90" x2="370" y2="100" stroke="#00c6ff" stroke-width="2" opacity="0.3"/>
+                                <line x1="280" y1="30" x2="270" y2="20" stroke="#00c6ff" stroke-width="2" opacity="0.3"/>
+                                <line x1="270" y1="60" x2="260" y2="60" stroke="#00c6ff" stroke-width="2" opacity="0.3"/>
+                                <line x1="280" y1="90" x2="270" y2="100" stroke="#00c6ff" stroke-width="2" opacity="0.3"/>
+                            </svg>
                         </div>
-                    </div>
-
-                    <!-- Solavita Europe -->
-                    <div class="region-section">
-                        <div class="region-section-title">Solavita — Europe</div>
-                        <div class="region-list">
-                            <a href="https://www.solavita.com/" class="region-item">
-                                <div class="region-info">
-                                    <img src="assets/images/globe1.svg" alt="" class="region-flag">
-                                    <div class="region-text">
-                                        <div class="region-name">Europe</div>
-                                        <div class="region-lang">English</div>
-                                    </div>
-                                </div>
-                                <span class="region-arrow">→</span>
-                            </a>
-                            <a href="https://it.solavita.com/" class="region-item">
-                                <div class="region-info">
-                                    <img src="assets/images/it.svg" alt="" class="region-flag">
-                                    <div class="region-text">
-                                        <div class="region-name">Italia</div>
-                                        <div class="region-lang">Italiano</div>
-                                    </div>
-                                </div>
-                                <span class="region-arrow">→</span>
-                            </a>
-                            <a href="https://de.solavita.com/" class="region-item">
-                                <div class="region-info">
-                                    <img src="assets/images/de.svg" alt="" class="region-flag">
-                                    <div class="region-text">
-                                        <div class="region-name">Deutschland</div>
-                                        <div class="region-lang">Deutsch</div>
-                                    </div>
-                                </div>
-                                <span class="region-arrow">→</span>
-                            </a>
+                        <div class="error-code">404</div>
+                        <h1>OUR NEW WEBSITE IS COMING SOON...</h1>
+                        <p>The page you're looking for is currently under construction.</p>
+                        <div class="error-links">
+                            <a href="#" onclick="openModal('both'); return false;" class="btn-secondary">Browse Global Sites</a>
+                        </div>
+                        <div class="error-contact">
+                            <p>Need help? Contact us at</p>
+                            <a href="tel:95105555">95105555</a>
                         </div>
                     </div>
                 </div>
@@ -515,14 +662,99 @@
 
             <!-- Footer -->
             <footer class="footer">
-                <span class="footer-copy">© 2026 Shenzhen SKYWORTH Photovoltaic Technology Co., Ltd.</span>
-                <div class="footer-links">
-                    <a href="https://www.skyworth-pv.com/about-us">About Us</a>
-                    <a href="https://www.skyworth-pv.com/contact-us">Contact Us</a>
-                    <a href="https://www.skyworth-pv.com/privacy">Privacy Policy</a>
+                <div class="footer-bottom">
+                    <span class="copyright">© 2026 SKYWORTH SOLAR CO., LTD.<br>深圳創維光伏科技股份有限公司</span>
+                    <div class="footer-nav">
+                        <a href="https://skyworth-pv.com"><img src="assets/images/logo.png" alt="SKYWORTH"></a>
+                        <a href="#" class="brand-link" onclick="openModal('skyworth'); return false;">Global Sites <span>+</span></a>
+                        <a href="#" class="brand-link" onclick="openModal('solavita'); return false;">Solavita Europe <span>+</span></a>
+                    </div>
                 </div>
             </footer>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modalTitle">Select Region</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-regions" id="modalRegions"></div>
+        </div>
+    </div>
+
+    <script>
+        const skyworthRegions = [
+            { name: 'Global', lang: 'English', flag: 'globe2.svg', url: 'https://www.skyworth-pv.com/' },
+            { name: 'Malaysia', lang: 'English', flag: 'my.svg', url: 'https://my.skyworth-pv.com/' },
+            { name: 'Thailand', lang: 'ภาษาไทย', flag: 'th.svg', url: 'https://th.skyworth-pv.com/' },
+            { name: 'Brasil', lang: 'Português', flag: 'globe1.svg', url: 'https://br.skyworth-pv.com/' },
+            { name: 'Việt Nam', lang: 'Tiếng Việt', flag: 'vn.png', url: 'https://vn.skyworth-pv.com/' },
+        ];
+
+        const solavitaRegions = [
+            { name: 'Europe', lang: 'English', flag: 'globe1.svg', url: 'https://www.solavita.com/' },
+            { name: 'Italia', lang: 'Italiano', flag: 'it.svg', url: 'https://it.solavita.com/' },
+            { name: 'Deutschland', lang: 'Deutsch', flag: 'de.svg', url: 'https://de.solavita.com/' },
+        ];
+
+        function openModal(brand) {
+            const overlay = document.getElementById('modalOverlay');
+            const title = document.getElementById('modalTitle');
+            const regions = document.getElementById('modalRegions');
+
+            if (brand === 'skyworth') {
+                title.textContent = 'SKYWORTH Solar — Global';
+                regions.innerHTML = skyworthRegions.map(r => `
+                    <a href="${r.url}" class="modal-region-item">
+                        <img src="assets/images/${r.flag}" alt="">
+                        <span>${r.name}</span>
+                    </a>
+                `).join('');
+            } else if (brand === 'solavita') {
+                title.textContent = 'Solavita — Europe';
+                regions.innerHTML = solavitaRegions.map(r => `
+                    <a href="${r.url}" class="modal-region-item">
+                        <img src="assets/images/${r.flag}" alt="">
+                        <span>${r.name}</span>
+                    </a>
+                `).join('');
+            } else {
+                title.textContent = 'Global Sites';
+                regions.innerHTML = `
+                    <div class="modal-section-title">SKYWORTH Solar</div>
+                    ${skyworthRegions.map(r => `
+                        <a href="${r.url}" class="modal-region-item">
+                            <img src="assets/images/${r.flag}" alt="">
+                            <span>${r.name}</span>
+                        </a>
+                    `).join('')}
+                    <div class="modal-section-title">Solavita</div>
+                    ${solavitaRegions.map(r => `
+                        <a href="${r.url}" class="modal-region-item">
+                            <img src="assets/images/${r.flag}" alt="">
+                            <span>${r.name}</span>
+                        </a>
+                    `).join('')}
+                `;
+            }
+
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(e) {
+            if (e && e.target !== document.getElementById('modalOverlay')) return;
+            const overlay = document.getElementById('modalOverlay');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
 </body>
 </html>
